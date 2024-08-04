@@ -1,1 +1,8 @@
-
+| **Aspect**          | **Top-Down Approach (Memoization)**                          | **Bottom-Up Approach (Tabulation)**                           |
+|---------------------|---------------------------------------------------------------|---------------------------------------------------------------|
+| **Method**          | Recursive with memoization                                    | Iterative with table                                         |
+| **Memory Usage**    | Additional stack space due to recursion                      | Explicit table usage, generally lower overhead               |
+| **Overhead**        | Function call overhead                                       | No function call overhead, but possible extra table overhead |
+| **Efficiency**      | Can be slower due to recursion overhead                       | Typically faster due to direct table access                  |
+| **Implementation**  | Often easier and more intuitive for recursive problems        | Can be more complex and less intuitive to set up             |
+| **Risk**            | Risk of stack overflow with deep recursion                     | No risk of stack overflow                                     |
