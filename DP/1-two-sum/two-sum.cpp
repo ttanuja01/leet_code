@@ -6,12 +6,12 @@ public:
         for(int i=0;i<nums.size();i++)
         {
             int k=target-nums[i];
-            if(m.find(k)!=m.end())
+            if(m[k])
             {
-               v.push_back(m[k]);
+               v.push_back(m[k]-1);
                 v.push_back(i);
             }
-            m[nums[i]]=i;
+            m[nums[i]]=i+1;
         }
         return v;
     }
