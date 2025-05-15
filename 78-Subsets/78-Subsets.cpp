@@ -1,20 +1,20 @@
-// Last updated: 5/13/2025, 5:55:33 PM
+// Last updated: 5/15/2025, 11:11:16 AM
 class Solution {
 public:
-   void generatesubsets(  vector<vector<int>>& ans,int n,int i,vector<int>& nums,vector<int>temp) {
-        if(i==n){
+    void generateSUbSets(vector<int>& nums,int n ,int i, vector<vector<int>>&ans,   vector<int> temp){
+        if(i>=n){
             ans.push_back(temp);
             return;
         }
-        generatesubsets(ans,n,i+1,nums,temp);
         temp.push_back(nums[i]);
-        generatesubsets(ans,n,i+1,nums,temp);
-    return ;
+         generateSUbSets(nums,n,i+1,ans,temp);
+         temp.pop_back();
+        generateSUbSets(nums,n,i+1,ans,temp);
     }
     vector<vector<int>> subsets(vector<int>& nums) {
         vector<vector<int>>ans;
         vector<int>temp;
-        generatesubsets(ans,nums.size(),0,nums,temp);
+        generateSUbSets(nums,nums.size(),0,ans,temp);
         return ans;
         
     }
